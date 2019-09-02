@@ -12,8 +12,8 @@ import {
   SeachWrapper
  } from './style';
 
-class Header extends React.Component {
-  render(){
+const Header = (props) => {
+
     return (
       <HeaderWrapper>
         <Logo />
@@ -27,17 +27,17 @@ class Header extends React.Component {
 
           <SeachWrapper>
             <CssTransition
-              in={this.props.focused}
+              in={props.focused}
               timeout={200}
               classNames="slide"
             >
               <NavSearch
-                className={this.props.focused ? 'focused': ''}
-                onFocus={this.props.handleInputFocus}
-                onBlur={this.props.handleInputBlur}
+                className={props.focused ? 'focused': ''}
+                onFocus={props.handleInputFocus}
+                onBlur={props.handleInputBlur}
               ></NavSearch>
             </CssTransition>
-            <i className={this.props.focused ? 'focused iconfont': 'iconfont'}>&#58890;</i>
+            <i className={props.focused ? 'focused iconfont': 'iconfont'}>&#58890;</i>
           </SeachWrapper>
         </Nav>
         <Addition>
@@ -49,7 +49,7 @@ class Header extends React.Component {
         </Addition>
       </HeaderWrapper>
     )
-  }
+
 }
 
 const mapStateToProps = (state)=>{
