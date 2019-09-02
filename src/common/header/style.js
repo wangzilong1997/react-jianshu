@@ -59,6 +59,24 @@ export const NavSearch = styled.input.attrs({
   &::placeholder {
     color:#999
   }
+  &.focused {
+    width:200px;
+    .iconfont {
+
+    }
+  }
+  &.slide-enter {
+    transition:all .2s ease-out;
+  }
+  &.slide-enter-active{
+    width:200px;
+  }
+  &.slide-exit {
+    transition:all .2s ease-out;
+  }
+  &.slide-exit-active {
+    width:160px;
+  }
 `
 export const Addition = styled.div`
   position:absolute;
@@ -70,7 +88,7 @@ export const Button = styled.div`
   float:right;
   margin-top:9px;
   margin-right:20px;
-  padding:0 20px;
+  padding:0 35px 0 20px;
   line-height:38px;
   border-radius:19px;
   border:1px solid #ec6149;
@@ -82,5 +100,22 @@ export const Button = styled.div`
     color:#fff;
     background:#ec6149 !important;
   }
+`
+export const SeachWrapper = styled.div`
+  position:relative;
+  float:left;
 
+  .iconfont {
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    width:30px;
+    line-height:30px;
+    text-align:center;
+    border-radius:15px;
+    &.focused {
+      background:#777;
+      color:#fff;
+    }
+  }
 `
