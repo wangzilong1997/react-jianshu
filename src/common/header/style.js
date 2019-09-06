@@ -23,7 +23,6 @@ export const Nav = styled.div`
   padding-right:70px;
   box-sizing:border-box;
   margin: 0 auto;
-
 `
 export const NavItem = styled.div`
   line-height:56px;
